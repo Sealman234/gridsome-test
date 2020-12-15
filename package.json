@@ -1,0 +1,29 @@
+{
+  "name": "awesome-blog",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore",
+    "lint": "npx eslint --ext .js,.vue .",
+    "lint:fix": "npx eslint --ext .js,.vue --fix ."
+  },
+  "dependencies": {
+    "@gridsome/source-filesystem": "^0.6.2",
+    "@gridsome/transformer-remark": "^0.6.4",
+    "@tailwindcss/postcss7-compat": "^2.0.2",
+    "autoprefixer": "^9.8.6",
+    "gridsome": "^0.7.0",
+    "gridsome-plugin-remark-shiki": "^0.6.0",
+    "postcss": "^7.0.35",
+    "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^3.1.0",
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-vue": "^7.2.0",
+    "postcss-nesting": "^7.0.1"
+  }
+}
