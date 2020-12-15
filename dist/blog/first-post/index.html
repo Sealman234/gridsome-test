@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html data-html-server-rendered="true" lang="en" data-vue-tag="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>透過 CSS Animation 製作打字動畫與閃爍游標 - Gridsome</title><meta name="gridsome:hash" content="0575c3405fe07c5d4f112a6c69fae6ed95e92323"><meta data-vue-tag="ssr" charset="utf-8"><meta data-vue-tag="ssr" name="generator" content="Gridsome v0.7.23"><meta data-vue-tag="ssr" data-key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta data-vue-tag="ssr" data-key="format-detection" name="format-detection" content="telephone=no"><link data-vue-tag="ssr" rel="icon" href="data:,"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="16x16" href="/assets/static/favicon.ce0531f.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="32x32" href="/assets/static/favicon.ac8d93a.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="96x96" href="/assets/static/favicon.b9532cc.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="76x76" href="/assets/static/favicon.f22e9f3.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="152x152" href="/assets/static/favicon.62d22cb.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="120x120" href="/assets/static/favicon.1539b60.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="167x167" href="/assets/static/favicon.dc0cdc5.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/static/favicon.7b22250.9bb7ffafafc09ac851d81afb65b8ef59.png"><link rel="preload" href="/assets/css/0.styles.3a78f3d5.css" as="style"><link rel="preload" href="/assets/js/app.3a4343d5.js" as="script"><link rel="preload" href="/assets/js/page--src-templates-blog-post-vue.bcea5cfc.js" as="script"><link rel="prefetch" href="/assets/js/page--node-modules-gridsome-app-pages-404-vue.67293ab8.js"><link rel="prefetch" href="/assets/js/page--src-pages-about-vue.6046caae.js"><link rel="prefetch" href="/assets/js/page--src-pages-blog-vue.24fe011a.js"><link rel="prefetch" href="/assets/js/page--src-pages-index-vue.d8768a4f.js"><link rel="prefetch" href="/assets/js/page--src-templates-tag-vue.5753b9a2.js"><link rel="stylesheet" href="/assets/css/0.styles.3a78f3d5.css"><style data-vue-tag="ssr" type="text/css">
+/* nunito-sans-regular - latin */
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/nunito-sans-v6-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('/fonts/nunito-sans-v6-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/nunito-sans-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/nunito-sans-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/nunito-sans-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/nunito-sans-v6-latin-regular.svg#NunitoSans') format('svg'); /* Legacy iOS */
+}
+/* nunito-sans-700 - latin */
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/nunito-sans-v6-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('/fonts/nunito-sans-v6-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/nunito-sans-v6-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/nunito-sans-v6-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/nunito-sans-v6-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/nunito-sans-v6-latin-700.svg#NunitoSans') format('svg'); /* Legacy iOS */
+}
+</style><noscript data-vue-tag="ssr"><style>.g-image--loading{display:none;}</style></noscript>
+  </head>
+  <body >
+    <div data-server-rendered="true" id="app" class="container max-w-screen-md mx-auto px-5"><header class="flex justify-between items-center mt-8 mb-12"><strong><a href="/" class="active">Gridsome</a></strong><nav><a href="/" class="active">
+        Home
+      </a><a href="/about/" class="ml-6">
+        About
+      </a><a href="/blog/" class="ml-6 active">
+        Blog
+      </a></nav></header><h1 class="text-3xl font-semibold mb-2">
+    透過 CSS Animation 製作打字動畫與閃爍游標
+  </h1><p class="font-light mb-4 text-gray-700">
+    February 20, 2020
+  </p><div class="flex flex-wrap mb-4 text-sm"><a href="/tag/backend/" class="bg-gray-300 rounded-full px-2 py-1 mr-4 mb-4 text-gray-700 hover:text-gray-300 hover:bg-gray-700">
+      backend
+    </a><a href="/tag/hipster/" class="bg-gray-300 rounded-full px-2 py-1 mr-4 mb-4 text-gray-700 hover:text-gray-300 hover:bg-gray-700">
+      hipster
+    </a></div><div class="mb-16 markdown"><p>本文介紹如何透過 CSS 來製作出打字動畫與閃爍游標，這個效果用在專案上可以添增一些亮點，視覺效果還滿不錯的，一起來試試看吧！</p>
+<!-- more -->
+<h2 id="動畫效果介紹"><a href="#%E5%8B%95%E7%95%AB%E6%95%88%E6%9E%9C%E4%BB%8B%E7%B4%B9" aria-hidden="true"><span class="icon icon-link"></span></a>動畫效果介紹</h2>
+<p>實現效果如下 GIF 截圖，主要動畫效果分為兩個部分，一個是打字動畫，即文字會由左至右出現，可調整速度，另一個部分是閃爍游標，就是模擬我們輸入文字時會出現的閃爍直槓。</p>
+<p><img src="https://i.imgur.com/vR51PwH.gif" alt="效果 GIF 示範"></p>
+<h2 id="如何實現動畫效果"><a href="#%E5%A6%82%E4%BD%95%E5%AF%A6%E7%8F%BE%E5%8B%95%E7%95%AB%E6%95%88%E6%9E%9C" aria-hidden="true"><span class="icon icon-link"></span></a>如何實現動畫效果</h2>
+<p>這個效果透過 HTML 與 CSS 就可以實作出來。</p>
+<p>HTML 的部分很簡單，只需要一行即可：</p>
+<pre class="shiki" style="background-color: #2e3440ff"><code><span class="line"><span style="color: #d8dee9ff">&lt;div class=&quot;typing&quot;&gt;我在冒險的起點等你！&lt;/div&gt;</span></span></code></pre>
+<p>我們主要都是在針對這個 <code>typing</code> 的 Class 去撰寫 CSS 樣式。</p>
+<h3 id="打字動畫效果"><a href="#%E6%89%93%E5%AD%97%E5%8B%95%E7%95%AB%E6%95%88%E6%9E%9C" aria-hidden="true"><span class="icon icon-link"></span></a>打字動畫效果</h3>
+<p>我們使用 <code>keyframe</code> 與 <code>animation</code> 來製作動畫。</p>
+<p><code>@keyframes</code> 是在制定動畫的內容，透過關鍵影格選擇器 <code>from</code> 與 <code>to</code>（或者 <code>0%</code> 與 <code>100%</code>）去製作想要完成的效果。</p>
+<p>打字效果其實就是以改變外層容器的寬度來實現的，因此這裡的設定就是針對 <code>width</code> 的調整。
+在範例中我把寬度設定為 <code>10em</code>，因為這剛好是 10 個中文字的寬度。</p>
+<pre class="shiki" style="background-color: #2e3440ff"><code><span class="line"><span style="color: #d8dee9ff">@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 10em;
+  }
+}</span></span></code></pre>
+<p>建立好 <code>@keyframes</code> 裡的動畫內容後，接著在想要呈現動畫內容的 Class 底下加入 <code>animation</code> 屬性。</p>
+<pre class="shiki" style="background-color: #2e3440ff"><code><span class="line"><span style="color: #d8dee9ff">/* animation: name duration timing-function delay iteration-count direction; */
+.typing {
+  animation: typing 3.5s steps(10, end) infinite;
+}</span></span></code></pre>
+<p>基本上就是填入剛才的 <code>@keyframes</code> 名稱，還有動畫作用時間 (<code>animation-duration</code>) 與作用次數 (<code>iteration-count</code>) 等等。
+像這邊我想要讓動畫執行無限次，因此 <code>iteration-count</code> 的值用了 <code>infinite</code>。</p>
+<p>補間動畫 (<code>timing-function</code>) 我是使用 CSS3 animation 的 <code>step()</code> 功能，這算是比較少用到的功能。
+它主要是可以讓動畫變得斷斷續續的，而非順暢地連續執行，不過在這邊使用其實還滿適合的，因為打字時本來就是一個字一個字斷斷續續地出現嘛！</p>
+<blockquote>
+<p>關於 steps 的介紹可參考這篇文章：<a href="https://www.zhangxinxu.com/wordpress/2018/06/css3-animation-steps-step-start-end/" target="_blank" rel="nofollow noopener noreferrer">CSS3 animation 屬性中的 steps 功能符深入介紹</a></p>
+</blockquote>
+<h3 id="閃爍游標效果"><a href="#%E9%96%83%E7%88%8D%E6%B8%B8%E6%A8%99%E6%95%88%E6%9E%9C" aria-hidden="true"><span class="icon icon-link"></span></a>閃爍游標效果</h3>
+<p>游標的部分，原先我是使用 <code>border</code> 製作，並且用 <code>padding</code> 來推開一些空間，這樣邊框才不會貼著文字。
+然而，這麼做也導致了 <code>overflow: hidden</code> 在幫我卡掉溢出時，會剪裁得不太乾淨，會出現下一個字提前出現一點點的狀況，影響了動畫整體的呈現。</p>
+<p>因此我們可以改成使用 <code>box-shadow</code> 來模擬游標。
+動畫內容一樣是使用 <code>@keyframes</code> 與 <code>animation</code> 來製作。</p>
+<p>最後附上完整的 CSS 程式碼：</p>
+<pre class="shiki" style="background-color: #2e3440ff"><code><span class="line"><span style="color: #d8dee9ff">.typing {
+  width: 10em;
+  white-space: nowrap;
+  border-right: 2px solid transparent;
+  animation: typing 3.5s steps(10, end), blinkCursor 0.75s step-end infinite;
+  overflow: hidden;
+  letter-spacing: 0;
+}
+/* 打字動畫 */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 10em;
+  }
+}
+/* 閃爍游標 */
+@keyframes blinkCursor {
+  from,
+  to {
+    box-shadow: 2px 0 0 0 transparent;
+  }
+  50% {
+    box-shadow: 2px 0 0 0;
+  }
+}</span></span></code></pre>
+<h2 id="參考資料"><a href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99" aria-hidden="true"><span class="icon icon-link"></span></a>參考資料</h2>
+<ol>
+<li><a href="https://dotblogs.com.tw/knightzone/2013/09/07/116716" target="_blank" rel="nofollow noopener noreferrer">#CSS：製作動畫效果－使用 keyframe 與 animation | 新罪楓翼 ☆ 灆洢騎士 - 點部落</a></li>
+</ol>
+<p><em>以上資源是我自己整理過後的筆記，若有錯誤歡迎隨時和我聯繫。</em></p>
+</div></div>
+    <script>window.__INITIAL_STATE__={"data":{"post":{"title":"透過 CSS Animation 製作打字動畫與閃爍游標","date":"February 20, 2020","content":"\u003Cp\u003E本文介紹如何透過 CSS 來製作出打字動畫與閃爍游標，這個效果用在專案上可以添增一些亮點，視覺效果還滿不錯的，一起來試試看吧！\u003C\u002Fp\u003E\n\u003C!-- more --\u003E\n\u003Ch2 id=\"動畫效果介紹\"\u003E\u003Ca href=\"#%E5%8B%95%E7%95%AB%E6%95%88%E6%9E%9C%E4%BB%8B%E7%B4%B9\" aria-hidden=\"true\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E動畫效果介紹\u003C\u002Fh2\u003E\n\u003Cp\u003E實現效果如下 GIF 截圖，主要動畫效果分為兩個部分，一個是打字動畫，即文字會由左至右出現，可調整速度，另一個部分是閃爍游標，就是模擬我們輸入文字時會出現的閃爍直槓。\u003C\u002Fp\u003E\n\u003Cp\u003E\u003Cimg src=\"https:\u002F\u002Fi.imgur.com\u002FvR51PwH.gif\" alt=\"效果 GIF 示範\"\u003E\u003C\u002Fp\u003E\n\u003Ch2 id=\"如何實現動畫效果\"\u003E\u003Ca href=\"#%E5%A6%82%E4%BD%95%E5%AF%A6%E7%8F%BE%E5%8B%95%E7%95%AB%E6%95%88%E6%9E%9C\" aria-hidden=\"true\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E如何實現動畫效果\u003C\u002Fh2\u003E\n\u003Cp\u003E這個效果透過 HTML 與 CSS 就可以實作出來。\u003C\u002Fp\u003E\n\u003Cp\u003EHTML 的部分很簡單，只需要一行即可：\u003C\u002Fp\u003E\n\u003Cpre class=\"shiki\" style=\"background-color: #2e3440ff\"\u003E\u003Ccode\u003E\u003Cspan class=\"line\"\u003E\u003Cspan style=\"color: #d8dee9ff\"\u003E&lt;div class=&quot;typing&quot;&gt;我在冒險的起點等你！&lt;\u002Fdiv&gt;\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Cp\u003E我們主要都是在針對這個 \u003Ccode\u003Etyping\u003C\u002Fcode\u003E 的 Class 去撰寫 CSS 樣式。\u003C\u002Fp\u003E\n\u003Ch3 id=\"打字動畫效果\"\u003E\u003Ca href=\"#%E6%89%93%E5%AD%97%E5%8B%95%E7%95%AB%E6%95%88%E6%9E%9C\" aria-hidden=\"true\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E打字動畫效果\u003C\u002Fh3\u003E\n\u003Cp\u003E我們使用 \u003Ccode\u003Ekeyframe\u003C\u002Fcode\u003E 與 \u003Ccode\u003Eanimation\u003C\u002Fcode\u003E 來製作動畫。\u003C\u002Fp\u003E\n\u003Cp\u003E\u003Ccode\u003E@keyframes\u003C\u002Fcode\u003E 是在制定動畫的內容，透過關鍵影格選擇器 \u003Ccode\u003Efrom\u003C\u002Fcode\u003E 與 \u003Ccode\u003Eto\u003C\u002Fcode\u003E（或者 \u003Ccode\u003E0%\u003C\u002Fcode\u003E 與 \u003Ccode\u003E100%\u003C\u002Fcode\u003E）去製作想要完成的效果。\u003C\u002Fp\u003E\n\u003Cp\u003E打字效果其實就是以改變外層容器的寬度來實現的，因此這裡的設定就是針對 \u003Ccode\u003Ewidth\u003C\u002Fcode\u003E 的調整。\n在範例中我把寬度設定為 \u003Ccode\u003E10em\u003C\u002Fcode\u003E，因為這剛好是 10 個中文字的寬度。\u003C\u002Fp\u003E\n\u003Cpre class=\"shiki\" style=\"background-color: #2e3440ff\"\u003E\u003Ccode\u003E\u003Cspan class=\"line\"\u003E\u003Cspan style=\"color: #d8dee9ff\"\u003E@keyframes typing {\n  from {\n    width: 0;\n  }\n  to {\n    width: 10em;\n  }\n}\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Cp\u003E建立好 \u003Ccode\u003E@keyframes\u003C\u002Fcode\u003E 裡的動畫內容後，接著在想要呈現動畫內容的 Class 底下加入 \u003Ccode\u003Eanimation\u003C\u002Fcode\u003E 屬性。\u003C\u002Fp\u003E\n\u003Cpre class=\"shiki\" style=\"background-color: #2e3440ff\"\u003E\u003Ccode\u003E\u003Cspan class=\"line\"\u003E\u003Cspan style=\"color: #d8dee9ff\"\u003E\u002F* animation: name duration timing-function delay iteration-count direction; *\u002F\n.typing {\n  animation: typing 3.5s steps(10, end) infinite;\n}\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Cp\u003E基本上就是填入剛才的 \u003Ccode\u003E@keyframes\u003C\u002Fcode\u003E 名稱，還有動畫作用時間 (\u003Ccode\u003Eanimation-duration\u003C\u002Fcode\u003E) 與作用次數 (\u003Ccode\u003Eiteration-count\u003C\u002Fcode\u003E) 等等。\n像這邊我想要讓動畫執行無限次，因此 \u003Ccode\u003Eiteration-count\u003C\u002Fcode\u003E 的值用了 \u003Ccode\u003Einfinite\u003C\u002Fcode\u003E。\u003C\u002Fp\u003E\n\u003Cp\u003E補間動畫 (\u003Ccode\u003Etiming-function\u003C\u002Fcode\u003E) 我是使用 CSS3 animation 的 \u003Ccode\u003Estep()\u003C\u002Fcode\u003E 功能，這算是比較少用到的功能。\n它主要是可以讓動畫變得斷斷續續的，而非順暢地連續執行，不過在這邊使用其實還滿適合的，因為打字時本來就是一個字一個字斷斷續續地出現嘛！\u003C\u002Fp\u003E\n\u003Cblockquote\u003E\n\u003Cp\u003E關於 steps 的介紹可參考這篇文章：\u003Ca href=\"https:\u002F\u002Fwww.zhangxinxu.com\u002Fwordpress\u002F2018\u002F06\u002Fcss3-animation-steps-step-start-end\u002F\" target=\"_blank\" rel=\"nofollow noopener noreferrer\"\u003ECSS3 animation 屬性中的 steps 功能符深入介紹\u003C\u002Fa\u003E\u003C\u002Fp\u003E\n\u003C\u002Fblockquote\u003E\n\u003Ch3 id=\"閃爍游標效果\"\u003E\u003Ca href=\"#%E9%96%83%E7%88%8D%E6%B8%B8%E6%A8%99%E6%95%88%E6%9E%9C\" aria-hidden=\"true\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E閃爍游標效果\u003C\u002Fh3\u003E\n\u003Cp\u003E游標的部分，原先我是使用 \u003Ccode\u003Eborder\u003C\u002Fcode\u003E 製作，並且用 \u003Ccode\u003Epadding\u003C\u002Fcode\u003E 來推開一些空間，這樣邊框才不會貼著文字。\n然而，這麼做也導致了 \u003Ccode\u003Eoverflow: hidden\u003C\u002Fcode\u003E 在幫我卡掉溢出時，會剪裁得不太乾淨，會出現下一個字提前出現一點點的狀況，影響了動畫整體的呈現。\u003C\u002Fp\u003E\n\u003Cp\u003E因此我們可以改成使用 \u003Ccode\u003Ebox-shadow\u003C\u002Fcode\u003E 來模擬游標。\n動畫內容一樣是使用 \u003Ccode\u003E@keyframes\u003C\u002Fcode\u003E 與 \u003Ccode\u003Eanimation\u003C\u002Fcode\u003E 來製作。\u003C\u002Fp\u003E\n\u003Cp\u003E最後附上完整的 CSS 程式碼：\u003C\u002Fp\u003E\n\u003Cpre class=\"shiki\" style=\"background-color: #2e3440ff\"\u003E\u003Ccode\u003E\u003Cspan class=\"line\"\u003E\u003Cspan style=\"color: #d8dee9ff\"\u003E.typing {\n  width: 10em;\n  white-space: nowrap;\n  border-right: 2px solid transparent;\n  animation: typing 3.5s steps(10, end), blinkCursor 0.75s step-end infinite;\n  overflow: hidden;\n  letter-spacing: 0;\n}\n\u002F* 打字動畫 *\u002F\n@keyframes typing {\n  from {\n    width: 0;\n  }\n  to {\n    width: 10em;\n  }\n}\n\u002F* 閃爍游標 *\u002F\n@keyframes blinkCursor {\n  from,\n  to {\n    box-shadow: 2px 0 0 0 transparent;\n  }\n  50% {\n    box-shadow: 2px 0 0 0;\n  }\n}\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Ch2 id=\"參考資料\"\u003E\u003Ca href=\"#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99\" aria-hidden=\"true\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E參考資料\u003C\u002Fh2\u003E\n\u003Col\u003E\n\u003Cli\u003E\u003Ca href=\"https:\u002F\u002Fdotblogs.com.tw\u002Fknightzone\u002F2013\u002F09\u002F07\u002F116716\" target=\"_blank\" rel=\"nofollow noopener noreferrer\"\u003E#CSS：製作動畫效果－使用 keyframe 與 animation | 新罪楓翼 ☆ 灆洢騎士 - 點部落\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n\u003C\u002Fol\u003E\n\u003Cp\u003E\u003Cem\u003E以上資源是我自己整理過後的筆記，若有錯誤歡迎隨時和我聯繫。\u003C\u002Fem\u003E\u003C\u002Fp\u003E\n","tags":[{"title":"backend","path":"\u002Ftag\u002Fbackend\u002F"},{"title":"hipster","path":"\u002Ftag\u002Fhipster\u002F"}]}},"context":{}};(function(){var s;(s=document.currentScript||document.scripts[document.scripts.length-1]).parentNode.removeChild(s);}());</script><script src="/assets/js/app.3a4343d5.js" defer></script><script src="/assets/js/page--src-templates-blog-post-vue.bcea5cfc.js" defer></script>
+  </body>
+</html>
