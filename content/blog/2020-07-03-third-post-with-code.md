@@ -15,7 +15,7 @@ Banh mi authentic fashion axe affogato shoreditch umami bicycle rights keytar pu
 ```vue
 <template>
   <Layout>
-    <h1 class="text-xl font-semibold mb-2">{{ $page.post.title }}</h1>
+    <h1 class="text-2xl text-strong font-semibold mb-2">{{ $page.post.title }}</h1>
     <span class="font-light">{{ $page.post.date }}</span>
     <div class="mt-8 mb-16 markdown" v-html="$page.post.content" />
   </Layout>

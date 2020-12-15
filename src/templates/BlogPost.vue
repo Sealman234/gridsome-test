@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1 class="text-3xl font-semibold mb-2">
+    <h1 class="text-2xl text-strong font-semibold mb-2">
       {{ $page.post.title }}
     </h1>
     <p class="font-light mb-4 text-gray-700">
@@ -14,7 +14,7 @@
         v-for="tag in $page.post.tags"
         :key="tag.id"
         :to="tag.path"
-        class="bg-gray-300 rounded-full px-2 py-1 mr-4 mb-4 text-gray-700 hover:text-gray-300 hover:bg-gray-700"
+        class="bg-softer rounded-full px-2 py-1 mr-4 mb-4 text-strong hover:text-default hover:bg-soft"
       >
         {{ tag.title }}
       </g-link>

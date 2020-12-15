@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1 class="text-xl font-semibold mb-5">
+    <h1 class="text-2xl text-strong font-semibold mb-5">
       {{ $page.tag.title }}
     </h1>
 
