@@ -1,0 +1,5 @@
+Sitemap: https://eager-turing-f1b292.netlify.app/sitemap.xml
+
+User-agent:*
+Disallow: /legal
+Disallow: /privacy

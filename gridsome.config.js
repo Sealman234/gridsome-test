@@ -15,7 +15,16 @@ const postcssPlugins = [tailwind(), autoprefixer(), postcssNesting()];
 if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss(purgecssConfig));
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'Sealman Awesome Blog',
+  siteDescription: 'Blog about awesome lists, collections of resources around a specific technology.',
+  siteUrl: process.env.DEPLOY_URL || 'https://eager-turing-f1b292.netlify.app/',
+  metadata: {
+    author: 'Sealman',
+    twitter: {
+      site: '@sealman234',
+      creator: '@sealman234',
+    },
+  },
   plugins: [
     {
       use: '@gridsome/source-filesystem',
@@ -37,6 +46,12 @@ module.exports = {
             create: true,
           },
         },
+      },
+    },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        exclude: ['/privacy', '/legal'],
       },
     },
   ],
