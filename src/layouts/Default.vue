@@ -61,7 +61,8 @@ export default {
     };
   },
   mounted() {
-    const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const userPrefersDark = window.matchMedia
+      && window.matchMedia('(prefers-color-scheme: dark)').matches;
     const defaultTheme = userPrefersDark ? 'theme-dark' : '';
     this.updateTheme(localStorage.getItem('theme') || defaultTheme);
   },
@@ -73,3 +74,10 @@ export default {
   },
 };
 </script>
+
+<style>
+  body {
+    padding: 0;
+    margin: 0;
+  }
+</style>
