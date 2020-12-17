@@ -13,8 +13,8 @@
   "vetur.validation.template": false,
   "editor.formatOnSave": false,
   // Set Up Auto-Format in VS Code
-  "files.autoSave": "afterDelay",
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  "eslint.format.enable": true,
-  "editor.tabSize": 2
+  // "files.autoSave": "afterDelay",
+  // "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  // "eslint.format.enable": true,
+  // "editor.tabSize": 2
 }

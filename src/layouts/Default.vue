@@ -11,8 +11,7 @@
         <nav class="flex">
           <div>
             <theme-switcher
-              :theme="theme"
-              @themeChanged="updateTheme"
+              :theme.sync="theme"
             />
           </div>
           <g-link
@@ -64,10 +63,10 @@ export default {
   },
   data() {
     return {
-      theme: '',
+      theme: 'theme-light',
     };
   },
-  mounted() {
+  created() {
     const userPrefersDark = window.matchMedia
       && window.matchMedia('(prefers-color-scheme: dark)').matches;
     const defaultTheme = userPrefersDark ? 'theme-dark' : '';

@@ -29,7 +29,8 @@ export default {
   methods: {
     toggleTheme() {
       const newTheme = this.theme === 'theme-light' ? 'theme-dark' : 'theme-light';
-      this.$emit('themeChanged', newTheme);
+      this.$emit('update:theme', newTheme);
+      localStorage.setItem('theme', newTheme);
     },
   },
 };
