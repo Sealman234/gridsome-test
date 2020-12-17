@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <h1 class="text-2xl text-strong font-semibold mb-5">
-      Blog Posts
+      歸檔
     </h1>
 
     <ul class="list-outside list-disc">

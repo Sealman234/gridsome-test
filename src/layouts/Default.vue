@@ -28,9 +28,9 @@
           </g-link>
           <g-link
             class="ml-6"
-            to="/blog/"
+            to="/archives/"
           >
-            Blog
+            Archives
           </g-link>
         </nav>
       </header>

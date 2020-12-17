@@ -46,8 +46,9 @@ query Post ($path: String!) {
 import PostSeo from '../mixins/SEO.vue';
 
 export default {
+  name: 'BlogPost',
   mixins: [PostSeo],
 };
 </script>
 
-<style src="../css/markdown.css" />
+<style src="./../css/markdown.css" />
